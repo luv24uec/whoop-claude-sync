@@ -1,0 +1,22 @@
+# Copy to config.toml and fill in values from https://developer.whoop.com
+# Or set the same keys via environment / .env
+
+client_id = "your-whoop-client-id"
+client_secret = "your-whoop-client-secret"
+redirect_uri = "https://localhost:8787/callback"
+
+# Where markdown + archive are written
+out_dir = "~/ClaudeProjects/Whoop"
+
+# Default lookback for incremental sync (first run uses backfill_days)
+sync_days = 14
+backfill_days = 90
+
+# Schedules — `whoop-claude-sync schedule install`
+daily_days = 14          # daily job lookback
+weekly_days = 90         # weekly job lookback (+ rebuilds upload_pack)
+daily_hour = 7
+daily_minute = 15
+weekly_weekday = 0       # 0=Sunday … 6=Saturday
+weekly_hour = 8
+weekly_minute = 0

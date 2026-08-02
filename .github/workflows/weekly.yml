@@ -1,0 +1,66 @@
+name: Whoop weekly sync
+
+on:
+  schedule:
+    # Sunday 08:00 India time (IST = UTC+5:30) → 02:30 UTC Sunday
+    - cron: "30 2 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: whoop-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install .
+
+      - name: Restore Whoop tokens
+        env:
+          WHOOP_TOKENS_JSON: ${{ secrets.WHOOP_TOKENS_JSON }}
+        run: |
+          mkdir -p state "$HOME/.config/whoop-claude-sync"
+          if [ -f state/tokens.json ]; then
+            cp state/tokens.json "$HOME/.config/whoop-claude-sync/tokens.json"
+          elif [ -n "$WHOOP_TOKENS_JSON" ]; then
+            printf '%s' "$WHOOP_TOKENS_JSON" > "$HOME/.config/whoop-claude-sync/tokens.json"
+          else
+            echo "Missing tokens: commit state/tokens.json or set secret WHOOP_TOKENS_JSON"
+            exit 1
+          fi
+          chmod 600 "$HOME/.config/whoop-claude-sync/tokens.json"
+
+      - name: Weekly sync + pack
+        env:
+          WHOOP_CLIENT_ID: ${{ secrets.WHOOP_CLIENT_ID }}
+          WHOOP_CLIENT_SECRET: ${{ secrets.WHOOP_CLIENT_SECRET }}
+          WHOOP_REDIRECT_URI: https://localhost:8787/callback
+          WHOOP_CLAUDE_OUT: ${{ github.workspace }}/output
+          PYTHONPATH: src
+        run: |
+          python -m whoop_claude_sync.cli run-weekly
+
+      - name: Persist tokens + commit output
+        run: |
+          mkdir -p state
+          cp "$HOME/.config/whoop-claude-sync/tokens.json" state/tokens.json
+          git config user.name "whoop-claude-sync[bot]"
+          git config user.email "whoop-claude-sync[bot]@users.noreply.github.com"
+          git add output state/tokens.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: weekly Whoop sync $(date -u +%Y-%m-%d)"
+            git push
+          fi

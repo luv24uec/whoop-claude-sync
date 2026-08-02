@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+
+# Never commit local credential files
+config.toml
+.env
+.venv/
+
+# Local dump dirs (cloud CI uses ./output)
+out/
+out-demo/
+
+# Ignore loose token files, but allow the CI state file in a PRIVATE repo
+tokens.json
+!state/tokens.json

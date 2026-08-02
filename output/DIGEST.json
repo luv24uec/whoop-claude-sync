@@ -1,0 +1,154 @@
+{
+  "generated_at": "2026-08-01T04:18:42.424128+00:00",
+  "days_of_data": 54,
+  "latest_day": "2026-08-01",
+  "baselines": {
+    "recovery": {
+      "today": 56.0,
+      "mean_7d": 61.5,
+      "mean_30d": 63.241379310344826,
+      "sd_30d": 21.261354244365517,
+      "z_today": -0.34058880855455703
+    },
+    "hrv": {
+      "today": 58.690804,
+      "mean_7d": 57.6124245,
+      "mean_30d": 52.79675417241379,
+      "sd_30d": 6.873921186109988,
+      "z_today": 0.8574508883657571
+    },
+    "rhr": {
+      "today": 55.0,
+      "mean_7d": 60.333333333333336,
+      "mean_30d": 59.10344827586207,
+      "sd_30d": 4.873183676394349,
+      "z_today": -0.842046708754101
+    },
+    "sleep_hours": {
+      "today": 4.8677,
+      "mean_7d": 5.216791203703704,
+      "mean_30d": 5.9809412835249045,
+      "sd_30d": 1.337731092378247,
+      "z_today": -0.8321861470273223
+    },
+    "strain": {
+      "today": 4.3158116,
+      "mean_7d": 8.536275683333335,
+      "mean_30d": 8.936971162068966,
+      "sd_30d": 3.513895892243384,
+      "z_today": -1.3151099815648408
+    },
+    "respiratory_rate": {
+      "today": 16.324219,
+      "mean_7d": 16.55542,
+      "mean_30d": 16.82000931034483,
+      "sd_30d": 0.49636951599527795,
+      "z_today": -0.9988331159916491
+    },
+    "sleep_performance": {
+      "today": 36.0,
+      "mean_7d": 53.5,
+      "mean_30d": 65.3103448275862,
+      "sd_30d": 20.562945328205032,
+      "z_today": -1.425396233845103
+    },
+    "skin_temp": {
+      "today": 33.634666,
+      "mean_7d": 33.85788866666667,
+      "mean_30d": 33.7317825862069,
+      "sd_30d": 0.3927774411408312,
+      "z_today": -0.2472560183823617
+    }
+  },
+  "sleep": {
+    "last_night_hours": 4.8677,
+    "last_night_need_hours": 9.750491111111112,
+    "shortfall_last_night_min": 292.96746666666667,
+    "cumulative_shortfall_7d_hours": 26.10065611111111,
+    "avg_hours_7d": 5.216791203703704,
+    "avg_hours_30d": 5.9809412835249045,
+    "consistency_30d": 61.758620689655174,
+    "efficiency_30d": 88.66585982758622,
+    "sd_hours_30d": 1.337731092378247
+  },
+  "load": {
+    "strain_7d": 8.536275683333335,
+    "strain_28d": 9.065713007407409,
+    "acute_chronic_ratio": 0.9416000348079095,
+    "workouts_7d": 5,
+    "workouts_28d": 23,
+    "monotony_7d": 2.214853819130613
+  },
+  "energy": {
+    "burn_yesterday_kcal": 772.406309751434,
+    "burn_avg_7d_kcal": 2059.082046685787,
+    "burn_avg_28d_kcal": 2272.2876796969053,
+    "intake_avg_7d_kcal": null,
+    "protein_avg_7d_g": null
+  },
+  "body": {
+    "latest_weight_kg": null,
+    "latest_body_fat_pct": null,
+    "latest_waist_cm": null
+  },
+  "correlations": {
+    "sleep_hours_to_recovery": {
+      "r": 0.6269970991372867,
+      "n": 50,
+      "significant": true,
+      "note": "More sleep the night before \u2192 higher recovery that morning"
+    },
+    "rem_to_recovery": {
+      "r": 0.5993478549029781,
+      "n": 50,
+      "significant": true,
+      "note": "REM sleep \u2192 recovery"
+    },
+    "sleep_consistency_to_recovery": {
+      "r": 0.28254965260499054,
+      "n": 50,
+      "significant": true,
+      "note": "Going to bed at consistent times \u2192 higher recovery"
+    },
+    "respiratory_rate_to_recovery": {
+      "r": -0.2126314421732909,
+      "n": 50,
+      "significant": false,
+      "note": "Respiratory rate \u2192 recovery"
+    },
+    "prior_day_strain_to_recovery": {
+      "r": -0.16897656682334364,
+      "n": 48,
+      "significant": false,
+      "note": "Yesterday's strain \u2192 this morning's recovery"
+    },
+    "recovery_to_next_day_strain": {
+      "r": 0.1244955848838349,
+      "n": 48,
+      "significant": false,
+      "note": "Do you actually train harder on high-recovery days?"
+    },
+    "efficiency_to_recovery": {
+      "r": 0.11622360466934897,
+      "n": 50,
+      "significant": false,
+      "note": "Sleep efficiency \u2192 recovery"
+    },
+    "disturbance_rate_to_recovery": {
+      "r": 0.03684168879264652,
+      "n": 50,
+      "significant": false,
+      "note": "Sleep disturbances per hour \u2192 recovery"
+    },
+    "sws_to_recovery": {
+      "r": 0.024632812874941977,
+      "n": 50,
+      "significant": false,
+      "note": "Deep (slow-wave) sleep \u2192 recovery"
+    }
+  },
+  "behaviour_effects": {},
+  "alerts": [
+    "You are 26.1h short of your sleep need across the last 7 days. Sleep restriction reliably raises ghrelin and lowers leptin \u2014 it makes a cut harder to adhere to and shifts weight loss toward lean mass."
+  ]
+}
