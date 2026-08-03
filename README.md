@@ -100,32 +100,26 @@ Local LaunchAgents need your Mac awake. Prefer **GitHub Actions** on a **private
 | **Daily** | Every day 07:15 | Sync last 14 days → refresh brief + 7-day files |
 | **Weekly** | Sundays 08:00 | Sync last 90 days → refresh trends + `upload_pack/` |
 
-### One-time cloud setup
+### One-time cloud setup (fast path — ~2 minutes)
 
-1. Create a **private** GitHub repo (do not make it public — it will hold Whoop tokens + health summaries).
-2. From this folder:
+Browser device-login automation is flaky. Use a **Personal Access Token** instead:
+
+1. Create a classic PAT: https://github.com/settings/tokens/new  
+   Scopes: **`repo`** + **`workflow`**  
+   (Keep the repo **private** — it will hold Whoop tokens + health summaries.)
+
+2. In Terminal:
 
 ```bash
+export GH_TOKEN='paste_your_pat_here'
 cd ~/whoop-claude-sync
-git init
-mkdir -p state output
-cp ~/.config/whoop-claude-sync/tokens.json state/tokens.json
-cp -R ~/ClaudeProjects/Whoop/* output/ 2>/dev/null || true
-git add .
-git commit -m "Initial whoop-claude-sync"
-git branch -M main
-git remote add origin git@github.com:YOUR_USER/whoop-claude-sync.git
-git push -u origin main
+./scripts/bootstrap_github.sh
 ```
 
-3. In GitHub → Settings → Secrets and variables → Actions, add:
-   - `WHOOP_CLIENT_ID`
-   - `WHOOP_CLIENT_SECRET`
-   - (optional backup) `WHOOP_TOKENS_JSON` — full contents of `tokens.json`
+That script creates the private repo, pushes code + `output/`, sets Actions secrets, and triggers a test daily sync.
 
-4. Actions → **Whoop daily sync** → Run workflow (test). Confirm a new commit lands under `output/`.
-
-Workflows live in `.github/workflows/daily.yml` and `weekly.yml`. They rotate/persist refresh tokens into `state/tokens.json` on each run.
+Workflows: `.github/workflows/daily.yml` (07:15 IST) and `weekly.yml` (Sun 08:00 IST).  
+They rotate/persist refresh tokens into `state/tokens.json` on each run.
 
 ### Pulling files onto this Mac (optional)
 
