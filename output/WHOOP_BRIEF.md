@@ -1,37 +1,37 @@
 # WHOOP Brief
 
-_Generated: 2026-08-03T06:47:00Z_
+_Generated: 2026-08-04T04:48:29Z_
 
 **Athlete:** Luv Saxena
 **Email:** luv.saxena24@gmail.com
 
 ## Latest snapshot
 
-- **Recovery:** 50% (yellow)
-- **HRV (rmssd):** 50 ms
-- **Resting HR:** 57 bpm
-- **SpO2:** 96%
-- **Skin temp:** 33 °C
-- **Sleep performance:** 70%
-- **Sleep duration:** 8h 09m in bed / 6h 32m asleep
-- **Sleep efficiency:** 80%
-- **Day strain:** 4
-- **Day avg HR:** 63 bpm
+- **Recovery:** 25% (red)
+- **HRV (rmssd):** 46 ms
+- **Resting HR:** 58 bpm
+- **SpO2:** 93%
+- **Skin temp:** 34 °C
+- **Sleep performance:** 38%
+- **Sleep duration:** 4h 05m in bed / 3h 51m asleep
+- **Sleep efficiency:** 95%
+- **Day strain:** 14
+- **Day avg HR:** 72 bpm
 
 ## Trends
 
-- **7-day avg recovery:** 55% (n=7)
-- **7-day avg HRV:** 55 ms (n=7)
-- **7-day avg sleep performance:** 52% (n=7)
-- **7-day avg strain:** 7.7 (n=7)
-- **30-day avg recovery:** 62% (n=29)
+- **7-day avg recovery:** 45% (n=7)
+- **7-day avg HRV:** 52 ms (n=7)
+- **7-day avg sleep performance:** 47% (n=7)
+- **7-day avg strain:** 9.9 (n=7)
+- **30-day avg recovery:** 60% (n=29)
 - **30-day avg HRV:** 52 ms (n=29)
-- **30-day avg sleep performance:** 64% (n=29)
-- **30-day avg strain:** 8.9 (n=29)
+- **30-day avg sleep performance:** 63% (n=29)
+- **30-day avg strain:** 9.1 (n=29)
 
 ## Notable signals
 
-- 2 red recovery days in the last week
+- 3 red recovery days in the last week
 - 4 nights under 6h asleep in the last week
 
 ## Files in this Project
