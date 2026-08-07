@@ -1,9 +1,10 @@
 # WHOOP Workouts
 
-_Generated: 2026-08-06T04:48:41Z_
+_Generated: 2026-08-07T04:14:37Z_
 
 | When | Sport | Strain | Avg HR | Max HR | Duration |
 |---|---|---:|---:|---:|---|
+| 2026-08-06 | walking | 6.2 | 117 | 148 | 29m |
 | 2026-08-06 | weightlifting | 8.3 | 133 | 147 | 21m |
 | 2026-08-06 | walking | 7.1 | 141 | 175 | 10m |
 | 2026-08-04 | walking | 5.0 | 115 | 142 | 14m |
@@ -43,4 +44,3 @@ _Generated: 2026-08-06T04:48:41Z_
 | 2026-07-04 | walking | 4.8 | 102 | 122 | 25m |
 | 2026-07-01 | walking | 4.0 | 94 | 108 | 23m |
 | 2026-07-01 | pickleball | 20.4 | 160 | 186 | 1h 59m |
-| 2026-06-28 | activity | 4.3 | 99 | 128 | 16m |
