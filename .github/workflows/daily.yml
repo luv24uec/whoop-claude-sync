@@ -2,8 +2,9 @@ name: Whoop daily sync
 
 on:
   schedule:
-    # 07:15 India time (IST = UTC+5:30) → 01:45 UTC
-    - cron: "45 1 * * *"
+    # 05:00 India time (IST = UTC+5:30) → 23:30 UTC previous calendar day.
+    # GitHub cron often drifts 1–3h late; early slot keeps data ready before a 09:00 brief.
+    - cron: "30 23 * * *"
   workflow_dispatch:
 
 permissions:

@@ -2,8 +2,9 @@ name: Whoop weekly sync
 
 on:
   schedule:
-    # Sunday 08:00 India time (IST = UTC+5:30) → 02:30 UTC Sunday
-    - cron: "30 2 * * 0"
+    # Sunday 06:00 India time (IST = UTC+5:30) → 00:30 UTC Sunday.
+    # Early slot so weekly pack is ready before a 09:00 brief despite Actions drift.
+    - cron: "30 0 * * 0"
   workflow_dispatch:
 
 permissions:
