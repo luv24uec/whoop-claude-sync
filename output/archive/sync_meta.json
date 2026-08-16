@@ -1,27 +1,27 @@
 {
-  "last_sync_at": "2026-08-16T15:49:16Z",
-  "window_start": "2026-08-02T15:49:14Z",
-  "window_end": "2026-08-16T15:49:14Z",
+  "last_sync_at": "2026-08-16T15:50:10Z",
+  "window_start": "2026-08-02T15:50:09Z",
+  "window_end": "2026-08-16T15:50:09Z",
   "backfill": false,
   "counts": {
     "recovery": {
       "fetched": 11,
-      "upserted": 6,
+      "upserted": 0,
       "total": 62
     },
     "sleep": {
       "fetched": 11,
-      "upserted": 6,
+      "upserted": 0,
       "total": 65
     },
     "cycles": {
       "fetched": 14,
-      "upserted": 9,
+      "upserted": 0,
       "total": 66
     },
     "workouts": {
       "fetched": 22,
-      "upserted": 10,
+      "upserted": 0,
       "total": 65
     }
   },
@@ -31,9 +31,9 @@
     "user_id": 29435295
   },
   "files": [
-    "/Users/luvsaxena/ClaudeProjects/Whoop/WHOOP_BRIEF.md",
-    "/Users/luvsaxena/ClaudeProjects/Whoop/WHOOP_LAST_7_DAYS.md",
-    "/Users/luvsaxena/ClaudeProjects/Whoop/WHOOP_LAST_30_DAYS.md",
-    "/Users/luvsaxena/ClaudeProjects/Whoop/WHOOP_WORKOUTS.md"
+    "/home/runner/work/whoop-claude-sync/whoop-claude-sync/output/WHOOP_BRIEF.md",
+    "/home/runner/work/whoop-claude-sync/whoop-claude-sync/output/WHOOP_LAST_7_DAYS.md",
+    "/home/runner/work/whoop-claude-sync/whoop-claude-sync/output/WHOOP_LAST_30_DAYS.md",
+    "/home/runner/work/whoop-claude-sync/whoop-claude-sync/output/WHOOP_WORKOUTS.md"
   ]
 }
