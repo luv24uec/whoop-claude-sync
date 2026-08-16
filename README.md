@@ -97,8 +97,9 @@ Local LaunchAgents need your Mac awake. Prefer **GitHub Actions** on a **private
 
 | Job | When (IST) | What |
 |-----|------------|------|
-| **Daily** | Every day 07:15 | Sync last 14 days → refresh brief + 7-day files |
-| **Weekly** | Sundays 08:00 | Sync last 90 days → refresh trends + `upload_pack/` |
+| **Daily (morning)** | ~05:00 target (cron drifts) | Sync last 14 days → refresh brief + 7-day files |
+| **Daily (evening)** | 21:30 | Same daily sync (evening refresh) |
+| **Weekly** | Sundays ~06:00 target | Sync last 90 days → refresh trends + `upload_pack/` |
 
 ### One-time cloud setup (fast path — ~2 minutes)
 
@@ -139,6 +140,21 @@ Or point Claude Code at this private repo — no Mac wake needed for sync itself
 - Requires an **active paid Whoop membership** for API data
 - Refresh tokens are **single-use** — cloud workflows persist the new token into `state/tokens.json`
 - First `sync` backfills **90 days**; daily runs use **14 days**
+
+### Critical: one writer for Whoop OAuth
+
+Whoop **invalidates** the old refresh token every time a new one is issued.
+
+If this Mac runs `sync` and GitHub Actions later uses the previous token, Actions fails with `Token refresh failed (400)` and your Excel/brief data goes stale.
+
+**Rule:** GitHub Actions is the only process that should call the Whoop API day-to-day.
+
+| Do | Don't |
+|----|--------|
+| Let Actions sync → `git pull` → Excel export | Run local `whoop-claude-sync sync` casually |
+| If you must sync locally, **commit + push `state/tokens.json` immediately** | Leave rotated tokens only in `~/.config/.../tokens.json` |
+
+Local noon Excel job (`deploy/export_excel_daily.sh`) only pulls from GitHub and rewrites `~/Whoop` — it does **not** talk to Whoop.
 
 ## Privacy
 

@@ -5,6 +5,8 @@ on:
     # 05:00 India time (IST = UTC+5:30) → 23:30 UTC previous calendar day.
     # GitHub cron often drifts 1–3h late; early slot keeps data ready before a 09:00 brief.
     - cron: "30 23 * * *"
+    # 21:30 India time → 16:00 UTC (evening refresh / easy to verify).
+    - cron: "0 16 * * *"
   workflow_dispatch:
 
 permissions:
