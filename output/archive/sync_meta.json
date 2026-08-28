@@ -1,27 +1,27 @@
 {
-  "last_sync_at": "2026-08-27T04:38:46Z",
-  "window_start": "2026-08-13T04:38:45Z",
-  "window_end": "2026-08-27T04:38:45Z",
+  "last_sync_at": "2026-08-28T00:48:35Z",
+  "window_start": "2026-08-14T00:48:33Z",
+  "window_end": "2026-08-28T00:48:33Z",
   "backfill": false,
   "counts": {
     "recovery": {
-      "fetched": 11,
-      "upserted": 0,
-      "total": 71
+      "fetched": 12,
+      "upserted": 1,
+      "total": 72
     },
     "sleep": {
-      "fetched": 17,
-      "upserted": 0,
-      "total": 80
+      "fetched": 18,
+      "upserted": 1,
+      "total": 81
     },
     "cycles": {
       "fetched": 12,
-      "upserted": 1,
-      "total": 75
+      "upserted": 2,
+      "total": 76
     },
     "workouts": {
-      "fetched": 9,
-      "upserted": 2,
+      "fetched": 7,
+      "upserted": 0,
       "total": 72
     }
   },
