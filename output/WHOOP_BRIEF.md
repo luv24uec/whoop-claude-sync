@@ -1,6 +1,6 @@
 # WHOOP Brief
 
-_Generated: 2026-08-28T00:48:35Z_
+_Generated: 2026-08-28T07:01:22Z_
 
 **Athlete:** Luv Saxena
 **Email:** luv.saxena24@gmail.com
@@ -16,14 +16,14 @@ _Generated: 2026-08-28T00:48:35Z_
 - **Sleep duration:** 10h 07m in bed / 8h 57m asleep
 - **Sleep efficiency:** 88%
 - **Day strain:** 8
-- **Day avg HR:** 71 bpm
+- **Day avg HR:** 70 bpm
 
 ## Trends
 
 - **7-day avg recovery:** 58% (n=7)
 - **7-day avg HRV:** 50 ms (n=7)
-- **7-day avg sleep performance:** 70% (n=7)
-- **7-day avg strain:** 7.9 (n=7)
+- **7-day avg sleep performance:** 69% (n=6)
+- **7-day avg strain:** 8.3 (n=6)
 - **30-day avg recovery:** 48% (n=25)
 - **30-day avg HRV:** 49 ms (n=25)
 - **30-day avg sleep performance:** 58% (n=25)
@@ -31,7 +31,7 @@ _Generated: 2026-08-28T00:48:35Z_
 
 ## Notable signals
 
-- 4 nights under 6h asleep in the last week
+- 3 nights under 6h asleep in the last week
 
 ## Files in this Project
 
