@@ -1,7 +1,7 @@
 {
-  "last_sync_at": "2026-08-30T19:13:09Z",
-  "window_start": "2026-08-16T19:13:08Z",
-  "window_end": "2026-08-30T19:13:08Z",
+  "last_sync_at": "2026-08-31T01:30:28Z",
+  "window_start": "2026-08-17T01:30:26Z",
+  "window_end": "2026-08-31T01:30:26Z",
   "backfill": false,
   "counts": {
     "recovery": {
@@ -15,7 +15,7 @@
       "total": 82
     },
     "cycles": {
-      "fetched": 12,
+      "fetched": 11,
       "upserted": 0,
       "total": 77
     },
