@@ -1,21 +1,21 @@
 {
-  "last_sync_at": "2026-09-08T01:21:03Z",
-  "window_start": "2026-08-25T01:21:02Z",
-  "window_end": "2026-09-08T01:21:02Z",
+  "last_sync_at": "2026-09-08T19:21:08Z",
+  "window_start": "2026-08-25T19:21:07Z",
+  "window_end": "2026-09-08T19:21:07Z",
   "backfill": false,
   "counts": {
     "recovery": {
-      "fetched": 4,
+      "fetched": 3,
       "upserted": 0,
       "total": 73
     },
     "sleep": {
-      "fetched": 5,
+      "fetched": 3,
       "upserted": 0,
       "total": 82
     },
     "cycles": {
-      "fetched": 6,
+      "fetched": 5,
       "upserted": 0,
       "total": 78
     },
