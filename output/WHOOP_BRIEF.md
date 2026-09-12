@@ -1,6 +1,6 @@
 # WHOOP Brief
 
-_Generated: 2026-09-11T19:04:06Z_
+_Generated: 2026-09-12T01:23:32Z_
 
 **Athlete:** Luv Saxena
 **Email:** luv.saxena24@gmail.com
@@ -26,8 +26,8 @@ _Generated: 2026-09-11T19:04:06Z_
 - **7-day avg strain:** — (n=0)
 - **30-day avg recovery:** 55% (n=14)
 - **30-day avg HRV:** 52 ms (n=14)
-- **30-day avg sleep performance:** 63% (n=14)
-- **30-day avg strain:** 8.0 (n=15)
+- **30-day avg sleep performance:** 64% (n=13)
+- **30-day avg strain:** 7.8 (n=14)
 
 ## Notable signals
 
