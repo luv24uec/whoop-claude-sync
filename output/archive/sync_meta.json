@@ -1,7 +1,7 @@
 {
-  "last_sync_at": "2026-09-12T18:14:53Z",
-  "window_start": "2026-08-29T18:14:52Z",
-  "window_end": "2026-09-12T18:14:52Z",
+  "last_sync_at": "2026-09-13T01:20:01Z",
+  "window_start": "2026-08-30T01:20:00Z",
+  "window_end": "2026-09-13T01:20:00Z",
   "backfill": false,
   "counts": {
     "recovery": {
