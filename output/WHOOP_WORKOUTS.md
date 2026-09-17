@@ -1,6 +1,6 @@
 # WHOOP Workouts
 
-_Generated: 2026-09-16T19:27:52Z_
+_Generated: 2026-09-17T01:37:39Z_
 
 | When | Sport | Strain | Avg HR | Max HR | Duration |
 |---|---|---:|---:|---:|---|
